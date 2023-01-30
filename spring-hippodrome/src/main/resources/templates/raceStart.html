@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>raceStart</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form th:action="@{start}" th:object="${race}" method="post">
+    <label th:for="quantity">quantity</label>
+    <br>
+    <input th:id="quantity" type="text" th:field="*{quantity}">
+    <br>
+    <label th:for="number">number</label>
+    <br>
+    <input th:id="number" type="text" th:field="*{number}">
+    <input th:type="submit">
+
+</form>
+</body>
+</html>
