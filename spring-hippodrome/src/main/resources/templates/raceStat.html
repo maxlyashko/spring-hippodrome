@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:>
+<head>
+    <title>raceStat</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h3>Total races:  <span th:text="${count}"></span></h3>
+
+<!--<table border="2">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th> raceId </th>-->
+<!--        <th> number </th>-->
+<!--&lt;!&ndash;        <th> place </th>&ndash;&gt;-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr th:each="race : ${races}">-->
+<!--&lt;!&ndash;    <tr th:each="raceHorse : ${raceHorses}">&ndash;&gt;-->
+<!--        <td><span th:text="${race.id}"> raceId </span></td>-->
+<!--        <td><span th:text="${race.number}"> number </span></td>-->
+<!--&lt;!&ndash;        <td><span th:text="${raceHorse.place}"> place </span></td>&ndash;&gt;-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--</table>-->
+
+<table border="2">
+    <thead>
+    <tr>
+        <th> raceId </th>
+        <th> horseId </th>
+        <th> place </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="raceHorse : ${raceHorse}">
+        <td><span th:text="${raceHorse.raceId}"> raceId </span></td>
+        <td><span th:text="${raceHorse.horseId}"> horseId </span></td>
+        <td><span th:text="${raceHorse.place}"> place </span></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
